@@ -1,0 +1,85 @@
+.footer {
+  background: var(--gradient-bg); /* градиент из index.css */
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 5;
+  animation: fadeInFooter 1.2s ease;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* чтобы на маленьких экранах переносилось */
+  gap: 10px;
+}
+
+.footer-container p {
+  margin: 0;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+  margin: 0 6px;
+}
+
+/* 🌸 Анимация появления */
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌸 Мобильная адаптация */
+
+/* 💻 до 1024px */
+@media (max-width: 1024px) {
+  .footer {
+    font-size: 0.95rem;
+    padding: 22px 15px;
+  }
+}
+
+/* 📱 до 768px */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.9rem;
+    padding: 20px 12px;
+  }
+
+  .divider {
+    margin: 0 4px;
+  }
+}
+
+/* 📱 до 480px */
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 18px 8px;
+  }
+
+  .footer-container {
+    gap: 6px;
+  }
+
+  .divider {
+    display: none; /* убираем точки на очень маленьких экранах */
+  }
+
+  .footer-container p {
+    display: block;
+  }
+}

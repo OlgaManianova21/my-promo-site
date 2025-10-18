@@ -1,0 +1,217 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 140px 8% 80px; /* 💡 верхний отступ, чтобы не перекрывал Header */
+  min-height: 80vh;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.hero.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Фото */
+.hero-image {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInImage 2s ease forwards;
+}
+
+.hero-image img {
+  width: 90%;
+  max-width: 550px; /* 💡 ограничиваем размер */
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Текст */
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+  animation: fadeUp 1.2s ease-out;
+  padding: 30px;
+  border-radius: 20px;
+  color: #2c2c2c;
+}
+
+/* 💎 Эффект стекла */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  background: linear-gradient(90deg, #8b0000, #b22222);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Абзацы */
+.hero-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.hero-text strong {
+  color: #7c1e1e;
+  font-weight: 700;
+}
+
+/* Кнопка */
+.hero-btn {
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #8b0000;
+  box-shadow: 0 0 15px rgba(178, 34, 34, 0.5);
+  transform: translateY(-3px);
+}
+
+/* 🌸 Анимации */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.pay-btn {
+  display: inline-block;
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(178, 34, 34, 0.3);
+}
+
+.pay-btn:hover {
+  background-color: #8b0000;
+  transform: translateY(-2px);
+}
+
+.payment-info {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #555;
+  opacity: 0.85;
+}
+
+
+
+/* 🌸 Мобильная адаптация */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 120px 20px 60px; /* 💡 безопасный верхний отступ */
+    text-align: center;
+    gap: 25px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-height: 380px;
+  }
+
+  .hero-image img {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-text {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    padding: 25px 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    max-height: 300px;
+  }
+
+  .hero-text {
+    padding: 20px 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+}
+
+
+

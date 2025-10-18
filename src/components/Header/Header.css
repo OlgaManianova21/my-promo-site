@@ -1,0 +1,150 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.header-scrolled {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+/* === Навигация === */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #b22222;
+}
+
+/* === Кнопка === */
+.header-btn {
+  background: #b22222;
+  color: white;
+  font-weight: 600;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.header-btn:hover {
+  background: #d83030;
+  box-shadow: 0 0 10px rgba(255, 50, 50, 0.5);
+}
+
+/* 💻 Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 12px 24px;
+  }
+
+  .header-logo {
+    height: 44px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  .header-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .header-logo {
+    height: 38px;
+  }
+
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .header-btn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+}
+
+/* 📱 Маленькие экраны */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .header-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .header-logo {
+    height: 34px;
+  }
+}

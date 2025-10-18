@@ -1,0 +1,178 @@
+.details {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #2c2c2c;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  box-sizing: border-box;
+}
+
+.details.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.details-container {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px 5%;
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+}
+
+.details-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8b0000;
+  margin-bottom: 25px;
+}
+
+.details-info p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.details-info strong {
+  color: #7c1e1e;
+}
+
+.details-map {
+  margin: 25px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.details-map:hover {
+  transform: scale(1.02);
+}
+
+.details-button {
+  display: inline-block;
+  margin-top: 15px;
+  background: linear-gradient(45deg, #8b0000, #d35b5b);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.details-button:hover {
+  background: linear-gradient(45deg, #a30000, #e16666);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(211, 91, 91, 0.4);
+}
+
+.details-line {
+  margin: 25px auto 10px;
+  border: none;
+  height: 2px;
+  width: 60%;
+  background: linear-gradient(to right, #d35b5b, #7c1e1e);
+  opacity: 0.8;
+}
+
+.details-support-text {
+  font-size: 0.9rem;
+  color: #4e4e4e;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* ===================== */
+/* 💻 Адаптация под планшет */
+/* ===================== */
+@media (max-width: 1024px) {
+  .details-container {
+    padding: 35px 6%;
+  }
+
+  .details-title {
+    font-size: 1.9rem;
+  }
+
+  .details-info p {
+    font-size: 1.05rem;
+  }
+
+  .details-map iframe {
+    height: 280px;
+  }
+}
+
+/* ===================== */
+/* 📱 Адаптация под планшеты и крупные телефоны */
+/* ===================== */
+@media (max-width: 768px) {
+  .details-container {
+    padding: 30px 7%;
+  }
+
+  .details-title {
+    font-size: 1.8rem;
+  }
+
+  .details-info p {
+    font-size: 1rem;
+  }
+
+  .details-map iframe {
+    height: 260px;
+  }
+
+  .details-button {
+    padding: 9px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===================== */
+/* 📱 Адаптация под телефоны */
+/* ===================== */
+@media (max-width: 480px) {
+  .details {
+    padding: 70px 10px;
+  }
+
+  .details-container {
+    padding: 25px 8%;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .details-title {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+
+  .details-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .details-map iframe {
+    height: 220px;
+  }
+
+  .details-button {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+  }
+
+  .details-support-text {
+    font-size: 0.8rem;
+  }
+}

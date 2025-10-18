@@ -1,13 +1,49 @@
-body {
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff0f0 0%, #d35b5b 70%, #7c1e1e 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  color: #111;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  background: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* чтобы контент не прятался под header */
+}
+
+/* Мобильная адаптация */
+
+body {
+  height: 100vh;
+  font-size: 16px;
+}
+
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
 }
