@@ -23,8 +23,15 @@ const Header = () => {
           <a href="#details">Контакты</a>
         </nav>
 
-        {/* Кнопка всегда видима */}
-        <button className="header-btn">Купить билет</button>
+       {/* 💳 Кнопка оплаты */}
+        <a
+          href="https://pay.lifepay.ru/p/1234567890abcdef" // ← вставь свою ссылку LifePay
+          target="_blank"
+          rel="noopener noreferrer"
+          className="header-btn pay-btn"
+        >
+          Купить билет 500₽
+        </a>
       </div>
     </header>
   );
