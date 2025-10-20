@@ -151,6 +151,7 @@ html {
   .header-btn {
     padding: 4px 8%;
     font-size: 0.75rem;
+    align-self: center;
   }
 
   .nav-links {
