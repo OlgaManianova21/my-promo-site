@@ -147,8 +147,8 @@ html {
   }
 
   .header-btn {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    padding: 5px 10px;
+    font-size: 0.7rem;
   }
 
   .nav-links {
@@ -156,6 +156,6 @@ html {
   }
 
   .header-logo {
-    height: 34px;
+    height: 30px;
   }
 }
