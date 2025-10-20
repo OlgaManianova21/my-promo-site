@@ -148,12 +148,15 @@ html {
 
   .header-btn {
     padding: 5px 10px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .nav-links {
     gap: 12px;
-  }
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
 
   .header-logo {
     height: 30px;

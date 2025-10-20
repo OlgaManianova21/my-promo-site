@@ -30,7 +30,7 @@ const Header = () => {
           rel="noopener noreferrer"
           className="header-btn pay-btn"
         >
-          Купить билет 500₽
+          Купить билет
         </a>
       </div>
     </header>
