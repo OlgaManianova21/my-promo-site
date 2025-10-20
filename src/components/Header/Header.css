@@ -142,23 +142,26 @@ html {
 /* 📱 Маленькие экраны */
 @media (max-width: 480px) {
   .header-container {
-    padding: 8px 10px;
-    gap: 6px;
-  }
+    padding: 8px;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
 
   .header-btn {
-    padding: 5px 10px;
-    font-size: 0.8rem;
+    padding: 4px 8%;
+    font-size: 0.75rem;
   }
 
   .nav-links {
-    gap: 12px;
+    gap: 10px;
     flex: 1 1 auto;
     min-width: 0;
-}
-
+  }
 
   .header-logo {
-    height: 30px;
+    height: 28px;
   }
+
 }
+
