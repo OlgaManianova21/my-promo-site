@@ -149,9 +149,9 @@ html {
 
 
   .header-btn {
-    padding: 4px ;
+    padding: 4px 10px;
     font-size: 0.75rem;
-   
+   width: auto;
   }
 
   .nav-links {
@@ -165,4 +165,42 @@ html {
   }
 
 }
+/* 📱 Мобильная адаптация (iPhone 375px) */
+@media (max-width: 375px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  /* Первая строка: логотип + навигация */
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-logo {
+    height: 28px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  /* Кнопка — во второй строке, по центру */
+  .header-btn {
+    align-self: center;
+    font-size: 0.rem;
+    width: auto;
+  }
+}
+
 
