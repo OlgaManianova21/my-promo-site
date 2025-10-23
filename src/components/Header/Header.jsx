@@ -25,10 +25,10 @@ const Header = () => {
 
        {/* 💳 Кнопка оплаты */}
         <a
-          href="https://pay.lifepay.ru/p/1234567890abcdef" // ← вставь свою ссылку LifePay
+          href="https://pay.lifepay.ru/p/1234567890abcdef" // ← вставь  ссылку LifePay
           target="_blank"
           rel="noopener noreferrer"
-          className="header-btn pay-btn"
+          className="header-btn"
         >
           Купить билет
         </a>

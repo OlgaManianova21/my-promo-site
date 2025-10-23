@@ -20,7 +20,7 @@ html {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 15px 40px;
   max-width: 1200px;
@@ -39,7 +39,7 @@ html {
   display: flex;
   gap: 32px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1;
 }
 
@@ -141,66 +141,59 @@ html {
 
 /* 📱 Маленькие экраны */
 @media (max-width: 480px) {
-  .header-container {
-    padding: 8px;
-    gap: 4px;
-    flex-wrap: wrap;
-}
-
-
   .header-btn {
-    padding: 4px 10px;
-    font-size: 0.75rem;
-   width: auto;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 6px;
+    min-width: fit-content;
+    line-height: 1;
+    
   }
 
   .nav-links {
     gap: 10px;
-    flex: 1 1 auto;
-    min-width: 0;
   }
 
   .header-logo {
     height: 28px;
   }
-
 }
-/* 📱 Мобильная адаптация (iPhone 375px) */
-@media (max-width: 375px) {
+/* 📱 Адаптация для ширины 375px (iPhone 12/13/14) */
+@media (max-width: 400px) {
   .header-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 10px;
-    gap: 8px;
-  }
-
-  /* Первая строка: логотип + навигация */
-  .top-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    padding: 8px 10px;
+    gap: 6px;
   }
 
   .header-logo {
-    height: 28px;
+    height: 26px;
   }
 
   .nav-links {
     display: flex;
-    gap: 12px;
+    justify-content: center;
+    gap: 8px;
   }
 
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
-  /* Кнопка — во второй строке, по центру */
   .header-btn {
-    align-self: center;
-    font-size: 0.rem;
-    width: auto;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    flex-shrink: 1;         /* ✅ Разрешаем уменьшаться */
+    white-space: nowrap;    /* Не ломаем текст */
+    max-width: 80px;        /* ✅ Чтобы не вылезала за пределы */
+    text-align: center;
+  }
+
+  /* 💳 чуть мягче анимация, чтобы не выглядела “тяжёлой” */
+  .pay-btn {
+    animation: pulse 3s infinite;
   }
 }
-
-
