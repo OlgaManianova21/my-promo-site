@@ -25,7 +25,7 @@ const Header = () => {
 
        {/* 💳 Кнопка оплаты */}
         <a
-          href="" // ← вставь  ссылку LifePay
+          href="" 
           target="_blank"
           rel="noopener noreferrer"
           className="header-btn"
