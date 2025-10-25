@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Hero.css";
 import speakers from "../../assets/speakers.jpg";
 
-const Hero = () => {
+
+const Hero = ({ onBuyTicketClick }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -41,17 +42,16 @@ const Hero = () => {
         <p>Подробности по телефону +7 918 495-19-89</p>
 
         {/* 💳 Кнопка оплаты */}
-        <a
-          href="" 
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={onBuyTicketClick}
           className="hero-btn pay-btn"
         >
-          Купить билет 500₽ (WhatsApp)
-        </a>
+          Купить билет 500₽
+        </button>
 
+        {/* Эту ссылку для вопросов можно тоже сделать кликабельной: */}
         <p className="payment-info">
-         Связаться с организатором (WhatsApp)
+        Безопасная оплата через T-Bank
         </p>
       </div>
     </section>

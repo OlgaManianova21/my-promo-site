@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Header.css";
 import logo from "../../assets/Logo.png";
 
-const Header = () => {
+const Header = ({ onBuyTicketClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,15 +23,13 @@ const Header = () => {
           <a href="#details">Контакты</a>
         </nav>
 
-       {/* 💳 Кнопка оплаты */}
-        <a
-          href="" 
-          target="_blank"
-          rel="noopener noreferrer"
+       {/* КНОПКА */}
+        <button
+          onClick={onBuyTicketClick}
           className="header-btn"
         >
-          Купить билет
-        </a>
+          Купить 
+        </button>
       </div>
     </header>
   );

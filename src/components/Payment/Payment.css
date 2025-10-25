@@ -1,0 +1,128 @@
+/* src/components/Payment/Payment.css */
+
+.payment-section h2 {
+  font-size: 2rem; /* Немного уменьшим для модалки */
+  color: #2c2c2c; /* Сделаем текст тёмным */
+  text-shadow: none; /* Уберем тень, она не нужна на белом */
+  margin-bottom: 10px;
+}
+.payment-section p {
+    color: #555; /* Сделаем текст описания серым */
+    font-size: 1rem;
+    margin-bottom: 30px; /* Больше отступ перед формой */
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  /* === УЛУЧШЕНИЕ: Добавляем "воздуха" === */
+  gap: 25px; /* Было 20px */
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 15px; /* Сделаем инпуты чуть выше */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box; 
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Эффект при клике на инпут */
+.form-group input:focus {
+  outline: none;
+  border-color: #7c1e1e;
+  box-shadow: 0 0 0 3px rgba(124, 30, 30, 0.1);
+}
+
+.payment-form .hero-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* --- Стили для модального окна --- */
+
+.payment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Фон чуть темнее */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.payment-modal {
+  /* === УЛУЧШЕНИЕ: Белый фон === */
+  background: #ffffff;
+  
+  /* === УЛУЧШЕНИЕ: Красивая карточка === */
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Мягкая тень */
+  
+  /* === УЛУЧШЕНИЕ: Больше "воздуха" === */
+  padding: 35px 45px;
+
+  margin: 0 20px; /* Отступы для мобильных */
+  max-width: 500px; /* Макс. ширина */
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; 
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.payment-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.payment-close-btn:hover {
+  color: #333;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 480px) {
+  .payment-modal {
+    padding: 30px 25px;
+  }
+  .payment-section h2 {
+    font-size: 1.8rem;
+  }
+}
