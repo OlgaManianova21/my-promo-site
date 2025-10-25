@@ -25,7 +25,7 @@ const Header = () => {
 
        {/* 💳 Кнопка оплаты */}
         <a
-          href="https://sbp.life-pay.ru/v1/sbp/static_url/payment/714777bd-1b62-42e1-b449-200d0657171d" // ← вставь  ссылку LifePay
+          href="" // ← вставь  ссылку LifePay
           target="_blank"
           rel="noopener noreferrer"
           className="header-btn"

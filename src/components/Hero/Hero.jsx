@@ -42,7 +42,7 @@ const Hero = () => {
 
         {/* 💳 Кнопка оплаты */}
         <a
-          href="https://sbp.life-pay.ru/v1/sbp/static_url/payment/714777bd-1b62-42e1-b449-200d0657171d" // ← вставь свою ссылку LifePay
+          href="" // ← вставь свою ссылку LifePay
           target="_blank"
           rel="noopener noreferrer"
           className="hero-btn pay-btn"
