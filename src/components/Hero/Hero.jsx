@@ -47,11 +47,11 @@ const Hero = () => {
           rel="noopener noreferrer"
           className="hero-btn pay-btn"
         >
-          Купить билет 500₽
+          Купить билет 500₽ (WhatsApp)
         </a>
 
         <p className="payment-info">
-          Оплата через безопасный сервис LifePay. После оплаты чек поступит на вашу почту.
+         Связаться с организатором (WhatsApp)
         </p>
       </div>
     </section>
