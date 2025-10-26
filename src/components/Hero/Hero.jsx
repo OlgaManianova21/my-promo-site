@@ -1,12 +1,14 @@
+// src/components/Hero/Hero.jsx
+
 import React, { useEffect, useRef, useState } from "react";
 import "./Hero.css";
 import speakers from "../../assets/speakers.jpg";
 
-
-const Hero = ({ onBuyTicketClick }) => {
+const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
+  // ❗️ ИСПРАВЛЕННЫЙ useEffect
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,7 +24,7 @@ const Hero = ({ onBuyTicketClick }) => {
 
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, []); // <-- Пустой массив здесь
 
   return (
     <section id="hero" ref={sectionRef} className={`hero ${isVisible ? "visible" : ""}`}>
@@ -32,26 +34,29 @@ const Hero = ({ onBuyTicketClick }) => {
 
       <div className="hero-text">
         <h1>
-          Когда последний раз ты делала что-то <br /> только для себя?
+          Как давно ты делала что-то <br /> для себя?
         </h1>
         <p>
-          <strong>Каблук</strong> — мероприятие для женщин, которые хотят больше:
-          вдохновения, новых знакомств и свободы быть собой.
+          <strong>Каблук</strong> — проект, объединяющий сообщества, клубы и лидеров мнений. 
+          Здесь Вы можете найти себя, войти в «ту дверь» и открыть новые возможности! 
+          А также заявить о своём сообществе и найти своих людей!
         </p>
         <p>16 ноября 2025 в 16:00 Краснодар ул. Вишняковой 1/10, стр.2</p>
         <p>Подробности по телефону +7 918 495-19-89</p>
 
-        {/* 💳 Кнопка оплаты */}
-        <button
-          onClick={onBuyTicketClick}
+        <a
+          href="https://wa.me/79184951989" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="hero-btn pay-btn"
         >
-          Купить билет 500₽
-        </button>
+          Забронировать (WhatsApp)
+        </a>
 
-        {/* Эту ссылку для вопросов можно тоже сделать кликабельной: */}
         <p className="payment-info">
-        Безопасная оплата через T-Bank
+         <a href="https://wa.me/79184951989" target="_blank" rel="noopener noreferrer">
+           Связаться с организатором
+         </a>
         </p>
       </div>
     </section>

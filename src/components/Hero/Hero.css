@@ -98,6 +98,25 @@
   transform: translateY(-3px);
 }
 
+.payment-info {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Стили для самой ссылки внутри .payment-info */
+.payment-info a {
+  color: #282626; 
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Эффект при наведении */
+.payment-info a:hover {
+  text-decoration: underline;
+}
+
 /* 🌸 Анимации */
 @keyframes fadeUp {
   from {
