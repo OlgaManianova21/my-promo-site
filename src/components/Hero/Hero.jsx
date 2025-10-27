@@ -45,12 +45,12 @@ const Hero = () => {
         <p>Подробности по телефону +7 918 495-19-89</p>
 
         <a
-          href="https://wa.me/79184951989" 
+          href="https://url.life-pay.ru/Vxaprj9P" /* ССЫЛКА lifepay */
           target="_blank"
           rel="noopener noreferrer"
           className="hero-btn pay-btn"
         >
-          Забронировать (WhatsApp)
+          Купить билет 500₽
         </a>
 
         <p className="payment-info">

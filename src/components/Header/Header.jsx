@@ -24,14 +24,14 @@ const Header = () => {
           <a href="#details">Контакты</a>
         </nav>
 
-        {/* Кнопка WhatsApp */}
-        <a
-          href="https://wa.me/79184951989" 
+        {/* Кнопка lifepay */}
+       <a
+          href="https://url.life-pay.ru/Vxaprj9P" 
           target="_blank"
           rel="noopener noreferrer"
           className="header-btn"
         >
-          Купить билет
+          Купить
         </a>
       </div>
     </header>
