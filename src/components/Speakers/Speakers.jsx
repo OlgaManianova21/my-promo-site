@@ -12,7 +12,7 @@ import anastasiaPhoto from "../../assets/speaker-anastasia.jpg";
 
 import annaSavchenkoPhoto from "../../assets/partner-anna.jpg";
 import matreshkaPhoto from "../../assets/partner-matreshka.jpg";
-import svetlanaPhoto from "../../assets/partner-svetlana.jpg";
+import svetlanaPhoto from "../../assets/partner-jane.jpg";
 import tatyanaPhoto from "../../assets/partner-tatyana.jpg";
 
 
@@ -114,9 +114,9 @@ const partners = [
     photo: matreshkaPhoto,
   },
   {
-    name: "Светлана Рябинова",
+    name: "Женя Ратникова",
     description:
-      "Исполнительница поп, джаз и современной музыки, лауреат международных конкурсов, основатель вокальной студии «Тут Поют!».",
+      "Певица, автор песен. Лауреат росийских и международных конкурсов. На сегодняшний день выпустила 25 авторских песен, в том числе дуэт «Лечу» с Этери Бериашвилли",
     photo: svetlanaPhoto,
   },
   {
